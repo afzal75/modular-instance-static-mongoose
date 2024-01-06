@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 import { ICat } from "./Cat.interface";
 
 const CatSchema = new Schema<ICat>({
@@ -15,5 +15,13 @@ const CatSchema = new Schema<ICat>({
     age: {
         type: Number,
         required: true
+    },
+    color: {
+        type: String,
+    },
+    secret: {
+        type: String,
     }
 })
+
+export const Cat = model<ICat>('Cat', CatSchema)
