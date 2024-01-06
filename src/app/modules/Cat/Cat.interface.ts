@@ -11,8 +11,14 @@ export type ICat = {
 
 // instance Methods
 
-export type ICatMethods = {
-    geterateId(): Promise<void>
+// export type ICatMethods = {
+//     geterateId(): Promise<void>
+// }
+
+
+export interface ICatModel extends Model<ICat> {
+    generateId(): Promise<void>;
 }
 
-export type CatModel = Model<ICat, Record<string, never>, ICatMethods>;
+
+// export type CatModel = Model<ICat, Record<string, never>>;
