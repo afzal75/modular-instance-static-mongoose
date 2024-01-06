@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express, { Application, Request, Response } from 'express';
 
-import { catRoutes } from './app/modules/Cat/Cat.route';
+// import { catRoutes } from './app/modules/Cat/Cat.route';
 import { dbConnect } from './utils/dbconnect';
 
 const app: Application = express();
@@ -14,7 +14,7 @@ app.use(cors());
 dbConnect();
 
 // application routes
-app.use('/api/v1/cat', catRoutes);
+// app.use('/api/v1/cat', catRoutes);
 
 const getAController = (req: Request, res: Response) => {
   res.status(200).json({
