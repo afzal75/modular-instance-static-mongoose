@@ -7,6 +7,12 @@ const createCat = async (payload: ICat): Promise<ICat> => {
     return result;
 }
 
+const getAllCat = async () => {
+    const result = await Cat.find();
+    return result
+}
+
 export const CatService = {
-    createCat
+    createCat,
+    getAllCat
 }
